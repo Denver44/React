@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import useGif from "../useGif.js";
+import useGif from "../Hooks/useGif.js";
 
 function Tag() {
   const [tag, setTag] = useState("dogs");
   const { gif, fetchGif } = useGif(tag);
-  console.log("hello",gif);
-
   return (
     <div className="container">
       <h1>Random {tag} Gif</h1>

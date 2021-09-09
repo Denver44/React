@@ -1,6 +1,7 @@
-import Random from "./Components/CustomHooks/components/Random_V2";
-import Tag from "./Components/CustomHooks/components/Tag_V2";
-import "./Components/CustomHooks/styles/index.css";
+import Tag from "../Version2/Tag";
+import Random from "../Version2/Random";
+import "./style.css";
+
 function App() {
   return (
     <div className="App">

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// API_KEY
 import axios from "axios";
 const API_KEY = process.env.REACT_APP_API_KEY;
 

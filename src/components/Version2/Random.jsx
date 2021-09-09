@@ -1,5 +1,5 @@
 import React from "react";
-import useGif from "../useGif.js";
+import useGif from "../Hooks/useGif.js";
 
 function Random() {
   const { gif, fetchGif } = useGif();
