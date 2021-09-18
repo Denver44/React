@@ -13,6 +13,9 @@ const NavBar = () => {
           <Link to="/post">Post A Comment</Link>
         </li>
         <li>
+          <Link to="/settings">Settings</Link>
+        </li>
+        <li>
           <Button />
         </li>
       </ul>
