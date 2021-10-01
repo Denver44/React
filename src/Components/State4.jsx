@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // Passing an object in UseState.
 // we have to use SpreadOperator to keep whatever it was as it is and then set the newValue.
-const State3 = () => {
+const State4 = () => {
   const [state, setState] = useState({ count: 4, theme: "blue" });
   const count = state.count;
   const theme = state.theme;
@@ -13,6 +13,7 @@ const State3 = () => {
       return {
         ...prevState,
         count: prevState.count + 1,
+        theme: "blue",
       };
     });
   };
@@ -37,4 +38,4 @@ const State3 = () => {
   );
 };
 
-export default State3;
+export default State4;

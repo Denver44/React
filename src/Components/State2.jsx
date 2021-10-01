@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // Correct way to update the value of the state. use this function version which is much better and reliable.
 
-const State1 = () => {
+const State2 = () => {
   const [count, setCount] = useState(5);
 
   const increment = () => {
@@ -22,4 +22,4 @@ const State1 = () => {
   );
 };
 
-export default State1;
+export default State2;

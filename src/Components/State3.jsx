@@ -6,7 +6,7 @@ import React, { useState } from "react";
 //   return 5;
 // };
 
-const State2 = () => {
+const State3 = () => {
   // const [count, setCount] = useState(func());
 
   // At time of complex computation use below method its safe.
@@ -33,4 +33,4 @@ const State2 = () => {
   );
 };
 
-export default State2;
+export default State3;
