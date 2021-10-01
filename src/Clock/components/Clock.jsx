@@ -1,6 +1,4 @@
 import React from "react";
-import ReactDom from "react-dom";
-
 import "./index.css";
 
 let time = new Date(2020, 9, 9, 1);
@@ -34,11 +32,12 @@ let heading = {
   fontFamily: "sans-serif",
 };
 
-ReactDom.render(
-  <>
+function Clock() {
+  return (
     <h1 style={heading}>
       Hello Sir, <span style={cssStyle}> {greeting}</span>
     </h1>
-  </>,
-  document.getElementById("root")
-);
+  );
+}
+
+export default Clock;
