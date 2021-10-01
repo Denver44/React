@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Effect2 = () => {
+const Effect5 = () => {
   const [resourceType, setResourceType] = useState("users");
 
   // We have to unsubscribe when we fetch data from api or we put any listener we have to remove the listener
@@ -41,4 +41,4 @@ const Effect2 = () => {
     </>
   );
 };
-export default Effect2;
+export default Effect5;

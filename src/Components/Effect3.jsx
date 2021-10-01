@@ -1,40 +1,40 @@
 import React, { useEffect, useState } from "react";
 
-const Effect2 = () => {
-  const [resourcetype, setresourcetype] = useState("users");
-  const [item, setitem] = useState([]);
+const Effect3 = () => {
+  const [resourceType, setResourceType] = useState("users");
+  const [item, setItem] = useState([]);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/${resourcetype}`)
       .then((response) => response.json())
-      .then((json) => setitem(json));
+      .then((json) => setItem(json));
   }, [resourcetype]);
 
   return (
     <>
       <button
         onClick={() => {
-          setresourcetype("posts");
+          setResourceType("posts");
         }}
       >
         post
       </button>
       <button
         onClick={() => {
-          setresourcetype("comments");
+          setResourceType("comments");
         }}
       >
         comments{" "}
       </button>
       <button
         onClick={() => {
-          setresourcetype("users");
+          setResourceType("users");
         }}
       >
         user{" "}
       </button>
 
-      <h1>{resourcetype}</h1>
+      <h1>{resourceType}</h1>
 
       {item.map((items) => {
         return <pre>{JSON.stringify(items)}</pre>;
@@ -42,4 +42,4 @@ const Effect2 = () => {
     </>
   );
 };
-export default Effect2;
+export default Effect3;
