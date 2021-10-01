@@ -1,13 +1,4 @@
-// import ReactSelect from "./Components/React-select/ReacySelect";
-import Memoized from "./Components/HOOKS/UseMemo/Memoized";
+import Memoized from "./Components/Memoized";
 
-function App() {
-  return (
-    <div className="App">
-      {/* <ReactSelect /> */}
-      <Memoized />
-    </div>
-  );
-}
-
+const App = () => <Memoized />;
 export default App;
