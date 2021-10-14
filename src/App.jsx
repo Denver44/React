@@ -1,3 +1,3 @@
-import React from 'react'
-const App = () => (<>Hello</>)
-export default App
+import React from "react";
+const App = () => <div>Hello</div>;
+export default App;
