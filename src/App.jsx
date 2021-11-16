@@ -1,3 +1,3 @@
 import React from "react";
-const App = () => <div>Hello</div>;
+const App = () => <div>Hi there!</div>;
 export default App;
