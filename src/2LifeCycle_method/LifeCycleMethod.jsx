@@ -1,4 +1,5 @@
 import React from "react";
+import Spinner from "./DefaultProps/Spinner";
 import SeasonDisplay from "./PassingPropsInLifeCycle/SeasonDisplay";
 
 export default class LifeCycleMethod extends React.Component {
@@ -46,11 +47,18 @@ export default class LifeCycleMethod extends React.Component {
           <div>Error: {this.state.error}</div>
         ) : (
           <div>
-            <div>Latitude: {this.state.lat} </div>
-            <div>longitude: {this.state.long} </div>
+            {this.state.lat === null || this.state.long === null ? (
+              <Spinner message="Please Allow to access your location" />
+            ) : (
+              <div>
+                <div>Latitude: {this.state.lat} </div>
+                <div>longitude: {this.state.long} </div>
+              </div>
+            )}
           </div>
         )}
-
+        <br />
+        <br />
         <SeasonDisplay lat={this.state.lat} />
       </>
     );
