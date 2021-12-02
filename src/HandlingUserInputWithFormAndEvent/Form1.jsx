@@ -15,12 +15,12 @@ const Form1 = () => {
   return (
     <>
       <div className="center">
-        <form onSubmit={onSubmit}   >
+        <form onSubmit={(e) => onSubmit(e)}>
           <h1 className="heading"> Hello {FullName} </h1>
           <input
             type="text"
             placeholder="Enter Your Name"
-            onChange={inputEvent}
+            onChange={(e) => inputEvent(e)}
             value={name}
           />
           <button type="submit">Click Me 👍 </button>
