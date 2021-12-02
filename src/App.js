@@ -1,4 +1,4 @@
-import LifeCycleMethod from "./13LifeCycle_method/LifeCycleMethod";
+import LifeCycleMethod from "./2LifeCycle_method/LifeCycleMethod.jsx";
 
 const App = () => {
   return (

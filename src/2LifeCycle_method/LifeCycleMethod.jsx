@@ -1,12 +1,22 @@
 import React from "react";
+import SeasonDisplay from "./PassingPropsInLifeCycle/SeasonDisplay";
 
 export default class LifeCycleMethod extends React.Component {
-  constructor(props) {
-    super(props); // We have to class this and pass props
+  // constructor(props) {
+  //   super(props); // We have to class this and pass props
 
-    this.state = { lat: null };
-    this.state = { long: null };
-    this.state = { error: "" };
+  //   this.state = { lat: null };
+  //   this.state = { long: null };
+  //   this.state = { error: "" };
+  // }
+
+  // Alternate Method to Initialize state.
+
+  state = { lat: null, long: null, error: "" };
+
+  componentDidMount() {
+    // console.log("I am called at time of Mount");
+    // We call this function when we want to Set Some State at the first time of render a component.
 
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -18,6 +28,17 @@ export default class LifeCycleMethod extends React.Component {
       }
     );
   }
+
+  componentDidUpdate() {
+    console.log("I am called at time of Update");
+    //whenever we to change or update the state we will call this function and it will call the render method again..
+  }
+
+  componentWillUnmount() {
+    console.log("I am called at that time when the component get unmount");
+    //For cleanupProcess
+  }
+
   render() {
     return (
       <>
@@ -29,14 +50,9 @@ export default class LifeCycleMethod extends React.Component {
             <div>longitude: {this.state.long} </div>
           </div>
         )}
+
+        <SeasonDisplay lat={this.state.lat} />
       </>
     );
   }
 }
-
-// State must be initialized when a components is created.
-// State can only be updated using the function setState.
-// Constructor function is very first function called when instance of class is created so initialize our state .
-// Defining constructor is optional used when we have to define our state.
-// Never write code in render method which make request.
-// if we have to use state we have to assign like this.state not this.myState.
