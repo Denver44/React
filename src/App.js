@@ -1,9 +1,9 @@
-import LifeCycleMethod from "./13LifeCycle_method/LifeCycleMethod";
+import Form1 from "./HandlingUserInputWithFormAndEvent/Form1";
 
 const App = () => {
   return (
     <div className="App">
-      <LifeCycleMethod />
+      <Form1 />
     </div>
   );
 };
