@@ -1,3 +1,12 @@
 import React from "react";
-const App = () => <div>Hi there!</div>;
+import CommentBox from "./components/CommentBox";
+import CommentList from "./components/CommentList";
+const App = () => {
+  return (
+    <>
+      <CommentBox />
+      <CommentList />
+    </>
+  );
+};
 export default App;
