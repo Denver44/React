@@ -3,11 +3,12 @@ import React from "react";
 function CommentList() {
   return (
     <ul>
-      {Array(10)
+      {Array(2)
         .fill(null)
-        .map((e) => {
+        .map((_, id) => {
           return (
             <li
+              key={id}
               style={{
                 display: "block",
                 margin: "5px",
