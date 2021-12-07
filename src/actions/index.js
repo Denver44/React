@@ -1,13 +1,17 @@
-import { SAVE_COMMENT } from "./type";
+import { SAVE_COMMENT, GET_ALL_COMMENT } from "./type";
 
+const saveComment = (comment) => {
+  return {
+    type: SAVE_COMMENT,
+    payload: {
+      comment,
+    },
+  };
+};
+const getAllComment = () => {
+  return {
+    type: GET_ALL_COMMENT,
+  };
+};
 
- const saveComment(comment)=>{
-    return {
-        type : SAVE_COMMENT,
-        payload : {
-            comment
-        }
-    }
-}
-
-export {saveComment};
+export { saveComment, getAllComment };

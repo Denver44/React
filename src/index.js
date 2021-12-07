@@ -8,8 +8,8 @@ import "./index.css";
 const store = createStore(reducers);
 
 ReactDOM.render(
-  <Provider>
-    <App store={store} />
+  <Provider store={store}>
+    <App />
   </Provider>,
   document.getElementById("root")
 );
