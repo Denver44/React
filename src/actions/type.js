@@ -1,3 +1,3 @@
 const SAVE_COMMENT = "save_comment";
-const GET_ALL_COMMENT = "get_all_comment";
-export { SAVE_COMMENT, GET_ALL_COMMENT };
+const FETCH_COMMENTS = "fetch_comment";
+export { SAVE_COMMENT, FETCH_COMMENTS };

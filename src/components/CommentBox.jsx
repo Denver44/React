@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { saveComment } from "actions/index";
+import { saveComment, fetchComment } from "actions/index";
 
 function CommentBox() {
   const [inputVal, setInputVal] = useState("");
@@ -10,6 +10,10 @@ function CommentBox() {
   const handleSubmit = () => {
     dispatch(saveComment(inputVal));
     setInputVal(() => "");
+  };
+
+  const getComments = () => {
+    dispatch(fetchComment());
   };
 
   return (
@@ -28,6 +32,12 @@ function CommentBox() {
         onClick={() => handleSubmit()}
       >
         Submit
+      </button>
+      <button
+        style={{ margin: "5px 0px 0px 5px" }}
+        onClick={() => getComments()}
+      >
+        Fetch Comments
       </button>
     </div>
   );

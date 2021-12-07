@@ -1,4 +1,5 @@
-import { SAVE_COMMENT, GET_ALL_COMMENT } from "./type";
+import axios from "api/axios";
+import { SAVE_COMMENT, FETCH_COMMENTS } from "./type";
 
 const saveComment = (comment) => {
   return {
@@ -8,10 +9,13 @@ const saveComment = (comment) => {
     },
   };
 };
-const getAllComment = () => {
+const fetchComment = () => {
+  const res = axios.get("/comments");
+
   return {
-    type: GET_ALL_COMMENT,
+    type: FETCH_COMMENTS,
+    payload: res,
   };
 };
 
-export { saveComment, getAllComment };
+export { saveComment, fetchComment };
