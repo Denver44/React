@@ -28,12 +28,14 @@ function CommentBox() {
         cols="50"
       />
       <button
+        className="submitComment"
         style={{ margin: "5px 0px 0px 5px" }}
         onClick={() => handleSubmit()}
       >
         Submit
       </button>
       <button
+        className="fetchComment"
         style={{ margin: "5px 0px 0px 5px" }}
         onClick={() => getComments()}
       >
