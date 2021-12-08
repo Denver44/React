@@ -6,7 +6,6 @@ function Search() {
   const [result, setResult] = useState([]);
 
   useEffect(() => {
-    console.log("term ", term);
     const SearchData = async () => {
       const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
         params: {
