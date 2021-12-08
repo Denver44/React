@@ -40,13 +40,23 @@ const options = [
 const App = () => {
   const [selected, setSelected] = useState(options[0]);
 
+  console.log("selected ", selected);
   return (
     <>
       <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Accordion items={items} />} />
-          <Route path="/dropdown" element={<Dropdown options={options} />} />
+          <Route
+            path="/dropdown"
+            element={
+              <Dropdown
+                selected={selected}
+                onSelectedChange={setSelected}
+                options={options}
+              />
+            }
+          />
           <Route path="/search" element={<Search />} />
           <Route path="/advancedSearch" element={<AdvancedSearchBox />} />
           <Route path="/greet" element={<GreetCard />} />
