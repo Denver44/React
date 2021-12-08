@@ -3,9 +3,7 @@ import React, { useState } from "react";
 function Accordion({ items }) {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const onTitleClicked = (index) => {
-    setActiveIndex(index);
-  };
+  const onTitleClicked = (index) => setActiveIndex(index);
 
   const renderedItems = items.map((item, index) => {
     const active = index === activeIndex ? "active" : "";
@@ -22,6 +20,7 @@ function Accordion({ items }) {
       </React.Fragment>
     );
   });
+
   return <div className="ui styled accordion">{renderedItems}</div>;
 }
 
