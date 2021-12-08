@@ -4,6 +4,7 @@ import Search from "components/SearchBox/Search";
 import AdvancedSearchBox from "components/AdvancedSearchBox/AdvancedSearch";
 import Dropdown from "components/Dropdown/Dropdown";
 import GreetCard from "components/GreetCard/GreetCard";
+import Translate from "components/Translate/Translate";
 import Header from "components/Header/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -54,12 +55,14 @@ const App = () => {
                 selected={selected}
                 onSelectedChange={setSelected}
                 options={options}
+                field={"Color"}
               />
             }
           />
           <Route path="/search" element={<Search />} />
           <Route path="/advancedSearch" element={<AdvancedSearchBox />} />
           <Route path="/greet" element={<GreetCard />} />
+          <Route path="/translate" element={<Translate />} />
         </Routes>
       </Router>
     </>

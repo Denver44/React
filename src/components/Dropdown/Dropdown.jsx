@@ -4,9 +4,10 @@ const selectedDropDownStyle = {
   fontWeight: "bold",
   fontSize: "14px",
   fontFamily: "sans serif",
+  padding: "4px",
 };
 
-const Dropdown = ({ options, selected, onSelectedChange }) => {
+const Dropdown = ({ options, selected, onSelectedChange, field }) => {
   const [open, setOpen] = useState(false);
   const handleDropDown = () => setOpen((prev) => !prev);
 
@@ -25,7 +26,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   return (
     <div className="ui form">
       <div className="field">
-        <label className="label">Select a Color</label>
+        <label className="label">Select a {field}</label>
         <div
           className={`ui selection dropdown ${open ? "visible active" : ""}`}
           onClick={() => handleDropDown()}
