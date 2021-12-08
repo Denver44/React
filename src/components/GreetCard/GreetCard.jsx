@@ -32,12 +32,12 @@ let heading = {
   fontFamily: "sans-serif",
 };
 
-function Clock() {
+const GreetCard = () => {
   return (
     <h1 style={heading}>
       Hello Sir, <span style={cssStyle}> {greeting}</span>
     </h1>
   );
-}
+};
 
-export default Clock;
+export default GreetCard;

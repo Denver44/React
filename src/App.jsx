@@ -3,7 +3,7 @@ import Accordion from "components/Accordion/Accordion";
 import Search from "components/SearchBox/Search";
 import AdvancedSearchBox from "components/AdvancedSearchBox/AdvancedSearch";
 import Dropdown from "components/Dropdown/Dropdown";
-import Clock from "components/Clock/Clock";
+import GreetCard from "components/GreetCard/GreetCard";
 import Header from "components/Header/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -46,10 +46,10 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Accordion items={items} />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/clock" element={<Clock />} />
-          <Route path="/advancedSearch" element={<AdvancedSearchBox />} />
           <Route path="/dropdown" element={<Dropdown options={options} />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/advancedSearch" element={<AdvancedSearchBox />} />
+          <Route path="/greet" element={<GreetCard />} />
         </Routes>
       </Router>
     </>

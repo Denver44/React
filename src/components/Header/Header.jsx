@@ -6,17 +6,17 @@ const Header = () => {
       <Link to="/" className="item">
         Accordion
       </Link>
-      <Link to="/search" className="item">
-        Search
-      </Link>
       <Link to="/dropdown" className="item">
         Dropdown
+      </Link>
+      <Link to="/search" className="item">
+        Search
       </Link>
       <Link to="/advancedSearch" className="item">
         Advanced Search
       </Link>
-      <Link to="/clock" className="item">
-        Clock
+      <Link to="/greet" className="item">
+        Greetings
       </Link>
     </div>
   );
