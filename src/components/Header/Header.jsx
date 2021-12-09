@@ -21,6 +21,9 @@ const Header = () => {
       <Link to="/translate" className="item">
         Translate
       </Link>
+      <Link to="/modalScreen" className="item">
+        Modal Screen
+      </Link>
     </div>
   );
 };

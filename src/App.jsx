@@ -5,6 +5,7 @@ import AdvancedSearchBox from "components/AdvancedSearchBox/AdvancedSearch";
 import Dropdown from "components/Dropdown/Dropdown";
 import GreetCard from "components/GreetCard/GreetCard";
 import Translate from "components/Translate/Translate";
+import ModalScreen from "components/ModalScreen/ModalScreen";
 import Header from "components/Header/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -63,6 +64,7 @@ const App = () => {
           <Route path="/advancedSearch" element={<AdvancedSearchBox />} />
           <Route path="/greet" element={<GreetCard />} />
           <Route path="/translate" element={<Translate />} />
+          <Route path="/modalScreen" element={<ModalScreen />} />
         </Routes>
       </Router>
     </>
