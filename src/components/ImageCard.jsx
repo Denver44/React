@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
 const ImageCard = ({ desc, imgPath }) => {
   const [span, setSpan] = useState(0);
   const imageRef = useRef();
   useEffect(() => {
-    imageRef.current.addEventListener("load", setSpans);
+    imageRef.current.addEventListener('load', setSpans);
+    console.log(imageRef);
   }, [imageRef]);
   const setSpans = () => {
     const height = imageRef.current.clientHeight;

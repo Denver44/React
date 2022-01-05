@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import axios from "../api/axios.js";
-import Images from "./Images";
+import React, { useState } from 'react';
+import axios from '../api/axios.js';
+import Images from './Images';
 
 function SearchBox() {
-  const [inputVal, setInputVal] = useState("");
+  const [inputVal, setInputVal] = useState('');
   const [images, setImages] = useState([]);
 
   const handleInput = (e) => setInputVal(() => e.target.value);
@@ -18,13 +18,15 @@ function SearchBox() {
         .catch((e) => setImages([]));
     };
     fetchImages();
-    setInputVal(() => "");
+    setInputVal(() => '');
   };
 
   return (
     <div>
-      <input type="text" value={inputVal} onChange={(e) => handleInput(e)} />
-      <button onClick={() => handleSubmit()}>Submit</button>
+      <div style={{ marginBottom: '40px' }}>
+        <input type="text" value={inputVal} onChange={(e) => handleInput(e)} />
+        <button onClick={() => handleSubmit()}>Submit</button>
+      </div>
       <Images images={images} />
     </div>
   );
