@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom';
+import UserSearch from './3.State/UserSearch';
 
 const App = () => (
   <div>
-    <h1>Hello World</h1>
+    <UserSearch />
   </div>
 );
 ReactDOM.render(<App />, document.getElementById('root'));
