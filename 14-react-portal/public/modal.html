@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .sidebar {
+        position: fixed;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        background-color: lightblue;
+        width: 300px;
+        height: 100vh;
+      }
+      .content {
+        margin-left: 300px;
+        background-color: greenyellow;
+        height: 100vh;
+      }
+
+      .modal-body {
+        background-color: white;
+        margin: 100px auto;
+        height: 30%;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'sans serif';
+      }
+
+      .modal {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        background-color: gray;
+        left: 0;
+        top: 0;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-body">I am a modal</div>
+    </div>
+    <div class="container">
+      <div class="sidebar">I am SideBar</div>
+      <div class="content">I am some Content</div>
+    </div>
+  </body>
+</html>
